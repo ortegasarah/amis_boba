@@ -22,24 +22,17 @@ get_header();
 	<div class="hero">
 		<div class="hero-inner container">
 			<h1 class="hero-text">
-				<span class="hero-sitename"><?php bloginfo('name'); ?></span>
-				do it better
-				<p class="hero-description">
+				<span class="hero-sitename hero-description"><?php bloginfo('name'); ?> do it better</span>
+
+				<!-- <p class="hero-description">
 					Passez quand vous voulez !
-				</p>
+				</p> -->
 			</h1>
 		</div>
-		<img src="../bobagirls/assets/trois-tasses-1500x1000.jpg" />
+		<!-- <img src="../bobagirls/assets/trois-tasses-1500x1000.jpg" /> -->
 	</div>
 
-	<div class="intro" id="intro">
-		<div class="intro-inner">
-			<h2 class="intro-title"> <?php bloginfo('name') ?> ouvre à Paris,</h2>
-			<p class="intro-description">un endroit où la culture traditionnelle du thé à Taïwan et la vie moderne se rejoignent.Toujours savoureux, chauds ou rafraîchissants selon les saisons, nos thés sauront vous surprendre !</p>
-		</div>
 
-
-	</div>
 	<div class="section-heading" id="food"> Menu </div>
 	<div class="grid">
 		<?php
@@ -68,6 +61,13 @@ get_header();
 
 		endif;
 		?>
+	</div>
+
+	<div class="intro" id="intro">
+		<div class="intro-inner">
+			<h2 class="intro-title"> <?php bloginfo('name') ?> ouvre à Paris,</h2>
+			<p class="intro-description">un endroit où la culture traditionnelle du thé à Taïwan et la vie moderne se rejoignent.Toujours savoureux, chauds ou rafraîchissants selon les saisons, nos thés sauront vous surprendre !</p>
+		</div>
 	</div>
 
 	<!-- LOCATIONS -->

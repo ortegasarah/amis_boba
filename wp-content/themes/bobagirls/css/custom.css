@@ -17,6 +17,14 @@ a {
 .site-header {
   padding: 30px;
   border-bottom: solid 1px #ccc;
+
+
+  background-image: url("https://cdn.sanity.io/images/fdp6xjdu/production/541bf91923ca59dbcfe31ab38abccc2d352b3204-2400x1601.jpg?fm=webp");
+  min-height: 752px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: relative */
 }
 
 .header-inner {
@@ -24,7 +32,7 @@ a {
     and justify the spaces between the elements */
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 
@@ -37,6 +45,8 @@ a {
 .language-select {
   text-align: right;
   font-size: 12px;
+  width: fit-content;
+  color: #fff;
 }
 
 .menu {
@@ -46,10 +56,15 @@ a {
   list-style: none;
 }
 
-.menu-item {
-  margin-left: 15px;
-  margin-right: 15px;
-  text-transform: lowercase;
+.menu-item,
+.menu-item a {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  color: #fff;
+  font-weight: 300;
+
 }
 
 .container {
@@ -60,33 +75,35 @@ a {
 }
 
 .hero {
-  /* background-image: url("../assets/trois-tasses-1500x1000.jpg"); */
+  /* background-image: url("../assets/trois-tasses-1500x1000.jpg");
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 180px 30px;
+  padding: 180px 30px; */
   position: relative;
 }
 
 .hero-text {
-  font-size: 180px;
+  /* font-size: 180px;
   line-height: 1;
-  color: #ffffff;
+  color: #ffffff; */
   text-align: center;
+  margin: 0;
 }
 
 .hero-sitename {
-  color: #B2AC88;
+  /* color: #B2AC88; */
+  color: #fff;
 }
 
 .hero-description {
   margin: 0;
   position: absolute;
-  bottom: 48px;
+  bottom: 300px;
   left: 0;
   width: 100%;
   text-align: center;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .intro {
@@ -160,6 +177,11 @@ so we need to override this using some important! css rules */
   pointer-events: none;
 }
 
+.post-thumbnail img {
+  width: 100% !important;
+
+}
+
 .section-heading {
   font-family: 'Cardo', serif;
   text-transform: capitalize;
@@ -190,6 +212,7 @@ so we need to override this using some important! css rules */
   max-width: 1220px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 3em;
 }
 
 .location-description {
@@ -266,4 +289,54 @@ so we need to override this using some important! css rules */
 
 .footer-copyright {
   font-size: 0.6em;
+}
+
+
+/* MOBILE */
+@media (max-width: 1100px) {
+  .entry-number {
+    width: 60px;
+    height: 60px;
+  }
+
+  .post {
+    padding-top: 45px;
+  }
+
+}
+
+@media (max-width: 680px) {
+  .site-header {
+    padding: 20px;
+  }
+
+  .logo,
+  .language-select {
+    width: 50px;
+  }
+
+  .menu-item {
+    margin: 0 5px;
+    font-size: 14px;
+  }
+
+  .menu-item span {
+    display: none;
+  }
+
+  .menu-item a {
+    padding: 0 0.3rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .entry-number {
+    width: 30px;
+    height: 30px;
+  }
+
+  .post {
+    padding-top: 19px;
+  }
 }

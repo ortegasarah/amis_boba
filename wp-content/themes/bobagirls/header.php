@@ -64,7 +64,7 @@
 			?>
 		</nav><!-- #site-navigation -->
 		<!-- todo: make this atually work -->
-		<div class="language-select">EN|FR</div>
+		<div class="language-select">EN | FR</div>
 
 		</div>
 	</header><!-- #masthead -->
