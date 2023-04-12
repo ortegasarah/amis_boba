@@ -17,11 +17,10 @@ a {
 .site-header {
   padding: 30px;
   border-bottom: solid 1px #ccc;
-
-
-  background-image: url("https://cdn.sanity.io/images/fdp6xjdu/production/541bf91923ca59dbcfe31ab38abccc2d352b3204-2400x1601.jpg?fm=webp");
+  background-image: url("../assets/trois-tasses-1500x1000.jpg");
+  /* background-image: url("../assets/le-comptoir-1500x1000.jpg"); */
   min-height: 752px;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   /* position: relative */
@@ -107,12 +106,15 @@ a {
 }
 
 .intro {
-  background-image: url("../assets/le-comptoir-1500x1000.jpg");
+    background-image: url("../assets/le-comptoir-1500x1000.jpg");
+  /* background-image: url("https://thenonparisian.com/wp-content/uploads/2021/03/bobalaize.jpg"); */
+  /* background-image: url("https://10619-2.s.cdn12.com/rests/original/410_505924989.jpg"); */
+  /* background-image: url("https://media.vogue.fr/photos/5c2f470e88e718304aab8a8b/master/w_1920,h_1280,c_limit/_28a8903_jpg_9551_jpeg_1793.jpeg"); */
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
-  padding: 180px 30px;
   position: relative;
+  padding: 180px 30px;
   padding-top: 310px;
   padding-bottom: 250px;
 }
@@ -120,14 +122,13 @@ a {
 .intro-inner {
   max-width: 650px;
   margin: auto;
-  color: #fff;
+  color: #000;
   text-align: center;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.20);
 }
 
 .intro-title {
   font-size: 20px;
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #000;
   padding-bottom: 1px;
   margin-top: 0;
   margin-bottom: 48px;

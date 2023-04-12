@@ -17,6 +17,8 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
+
+
 	<!-- hero elements -->
 	<!-- todo:make it dynamic -->
 	<div class="hero">
@@ -35,6 +37,10 @@ get_header();
 
 	<div class="section-heading" id="food"> Menu </div>
 	<div class="grid">
+
+		<?php query_posts('category_name=Menu'); ?>
+
+
 		<?php
 		if (have_posts()) :
 
@@ -63,41 +69,53 @@ get_header();
 		?>
 	</div>
 
-	<div class="intro" id="intro">
-		<div class="intro-inner">
-			<h2 class="intro-title"> <?php bloginfo('name') ?> ouvre à Paris,</h2>
-			<p class="intro-description">un endroit où la culture traditionnelle du thé à Taïwan et la vie moderne se rejoignent.Toujours savoureux, chauds ou rafraîchissants selon les saisons, nos thés sauront vous surprendre !</p>
-		</div>
-	</div>
+	<!-- query for intro category post and get just one single post -->
+	<?php query_posts('posts_per_page=1&post_type=Intro'); ?>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+			<div class="intro" id="intro">
+				<div class="intro-inner">
+					<h2 class="intro-title"> <?php the_title(); ?></h2>
+					<div class="intro-description">
+						<?php the_content(); ?>
+					</div>
+				</div>
+			</div>
+
+
+
+
+	<?php
+		endwhile;
+	endif;
+	?>
 	<!-- LOCATIONS -->
 	<div class="section-heading" id="locations">
 		Adresse
 	</div>
+
+
 	<div class="locations">
-		<div class="location grid">
-			<div class="map">
-				<div class="map-inner">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.7540036941664!2d2.3540002510614055!3d48.862901108241815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e04cff01a71%3A0x516159a5014101f8!2s14%20Rue%20de%20Montmorency%2C%2075003%20Paris%2C%20France!5e0!3m2!1sen!2sus!4v1679430467860!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<?php query_posts('post_type=location'); ?>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+				<div class="location grid">
+					<div class="map">
+						<div class="map-inner">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.7540036941664!2d2.3540002510614055!3d48.862901108241815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e04cff01a71%3A0x516159a5014101f8!2s14%20Rue%20de%20Montmorency%2C%2075003%20Paris%2C%20France!5e0!3m2!1sen!2sus!4v1679430467860!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</div>
+
+					<div class="location-info">
+						<div class="location-description">
+							<?php the_content(); ?>
+						</div>
+					</div>
+
 				</div>
-			</div>
+		<?php endwhile;
+		endif; ?>
 
-			<div class="location-info">
-				<div class="location-description">
-					Amis Boba Marais<br>
-					<p>14 Rue de Montmorency, 75003 Paris, France</p>
-					<p>09 12 23 45 67</p>
-
-					<p>
-						Sunday to Friday <br>
-						12:30 - 7PM<br>
-
-						Friday to Saturday<br>
-						12:30 - 10PM<br>
-					</p>
-				</div>
-			</div>
-		</div>
 	</div>
 
 </main><!-- #main -->
