@@ -218,6 +218,13 @@ add_action( 'init', 'add_locations', 0 );
 
 
 
+//googleMap api
+function boba_map($api) {
+	$api['key']= 'AIzaSyBR7-sFGsc0QcRusDau3BR3W26ppR_kVmI';
+	return $api;
+}
+add_filter('acf/fields/google_map/api', 'boba_map');
+
 // functions.php
 function get_category_description($query) {
   query_posts($query . '&posts_per_page=1');
@@ -227,3 +234,4 @@ function get_category_description($query) {
     echo $category[0]->category_description;
   }
 }
+
