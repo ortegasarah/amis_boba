@@ -35,7 +35,9 @@ get_header();
 	</div>
 
 
-	<div class="section-heading" id="food"> Menu </div>
+	<div class="section-heading" id="food">
+		<?php get_category_description('category_name=menu'); ?>
+	</div>
 	<div class="grid">
 
 		<?php query_posts('category_name=Menu'); ?>
@@ -91,7 +93,7 @@ get_header();
 	?>
 	<!-- LOCATIONS -->
 	<div class="section-heading" id="locations">
-		Adresse
+	<?php get_category_description('category_name=locations'); ?>
 	</div>
 
 
