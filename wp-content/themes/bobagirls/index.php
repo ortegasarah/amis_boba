@@ -93,10 +93,8 @@ get_header();
 	?>
 	<!-- LOCATIONS -->
 	<div class="section-heading" id="locations">
-	<?php get_category_description('category_name=locations'); ?>
-	<p>hiii</p>
+		<?php get_category_description('post_type=location'); ?>
 	</div>
-
 
 	<div class="locations">
 		<?php query_posts('post_type=location'); ?>
