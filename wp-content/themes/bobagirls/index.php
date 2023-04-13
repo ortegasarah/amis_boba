@@ -94,6 +94,7 @@ get_header();
 	<!-- LOCATIONS -->
 	<div class="section-heading" id="locations">
 	<?php get_category_description('category_name=locations'); ?>
+	<p>hiii</p>
 	</div>
 
 
